@@ -1,4 +1,4 @@
-### 后端接口地址
+### API
     https://binaryify.github.io/NeteaseCloudMusicApi/#/
 
 ### 前端相关
@@ -9,3 +9,4 @@
         - TypeScript
         - Webpack
         - Axios
+        - Scss
