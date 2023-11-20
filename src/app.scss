@@ -1,7 +1,18 @@
-#root {
-  h2 {
-    font-size: 30px;
-    text-align: center;
+@import './assets/scss/_mixins.scss';
+
+#root,
+.music-content {
+  height: 100%;
+  width: 100%;
+}
+
+.music-content {
+  background-color: #0f1423;
+  @include flex-center;
+
+  &-box {
+    width: 70vw;
+    height: 80vh;
+    background-color: #fff;
   }
 }
-  

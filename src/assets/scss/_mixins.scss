@@ -1,0 +1,17 @@
+// ========== flex布局 start ==========
+@mixin flex-setting($horizontal, $vertical: initial, $direction: row) {
+    display: flex;
+    align-items: $vertical;
+    justify-content: $horizontal;
+    flex-direction: $direction;
+}
+
+@mixin flex-center {
+    @include flex-setting(center, center);
+}
+
+@mixin flex-space-between {
+    @include flex-setting(center, space-between);
+
+}
+// ========== flex布局 end ==========
