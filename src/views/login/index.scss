@@ -1,0 +1,24 @@
+@import '@/assets/scss/index.scss';
+
+.login-box {
+    width: 100%;
+    height: 100%;
+    background-color: #eee;
+    @include flex-center;
+
+    .logo {
+        text-align: center;
+    }
+
+    .login-form {
+        .form-auto-check {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    .icon-wy {
+        color: $color-base;
+        font-size: 50px;
+    }
+}

@@ -54,7 +54,7 @@ module.exports = {
     // 在引入模块时不带文件后缀时，会来该配置数组里面依次添加后缀查找文件。
     extensions: ['.js', '.ts', '.tsx'],
     alias: {
-      '@': path.resolve(__dirname, 'src')
+      '@': path.resolve(__dirname, '../src')
     }
   },
   cache: {

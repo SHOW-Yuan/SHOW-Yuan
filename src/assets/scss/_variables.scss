@@ -4,14 +4,14 @@ $font-size-base: 14px !default;
 $font-size-large: 16px !default;
 $font-size-larger: 18px !default;
 // 颜色
-$color-base: #13c2c2 !default;
+$color-base: #ff3a3a !default;
 $color-gray: #8c8c8c !default;
 $color-black: #262626 !default;
 $color-wx: #07C160 !default;
 
 // 普通颜色
-$color-primary: #13C2C2 !default;
-$color-main: #13c2c2;
+$color-primary: #ff3a3a !default;
+$color-main: #ff3a3a;
 $color-main-wx: #4378BE!important;
 $color-safe: #FFAE00;
 $color-danger: #ff4d4f;
@@ -36,7 +36,7 @@ $bg-color-l2: #f2f2f2;
 $bg-color-search:#F7F8F8;
 
 // 边框颜色
-$color-border-l1: #E1E3E2; // 上下导航，重要分割线  一级边框
+$color-border-l1: #d9d9d9; // 上下导航，重要分割线  一级边框
 $color-border-l2: #E8E8E8; // 列表分割线，界面分割线  二级边框
 
 // 边框样式
@@ -45,4 +45,5 @@ $border-l2: 0.5px solid $color-border-l2;
 $border-color-base: #e0e1e2 !default;
 
 //圆角
+$border-radius-l1: 4px; // 输入框边框
 $border-radius: 8px;
