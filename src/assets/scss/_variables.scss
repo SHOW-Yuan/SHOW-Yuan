@@ -21,10 +21,9 @@ $color-reject: #ff4d4f; // 拒绝颜色，对应蓝湖上的“提示”颜色 �
 $color-form-error: #FF5219; // 表单错误颜色，兰姐姐又新加的颜色
 
 // 文字颜色
-$color-text-l1: #262626; // 主要文字
-$color-text-l2: #595959; // 常规文字 .56
-$color-text-l3: #8c8c8c; // 次要文字 .50
-$color-text-l4: #bfbfbf; // 站位文字 .28
+$color-text-l1: #313131; // 主要文字
+$color-text-l2: #333333; // 常规文字
+$color-text-l3: #999999; // 站位文字
 
 // 投影样式
 $box-shadow-l1: 0px 2px 10px 0px rgba(153, 153, 153, 0.2);
@@ -46,4 +45,6 @@ $border-color-base: #e0e1e2 !default;
 
 //圆角
 $border-radius-l1: 4px; // 输入框边框
-$border-radius: 8px;
+$border-radius-l2: 8px;
+$border-radius-l3: 10px; // 输入框边框
+$border-radius-l4: 12px; // 输入框边框
