@@ -3,22 +3,23 @@ import React, { FC } from "react";
 import { Card, Button, Checkbox, Form, Input } from 'antd';
 import "./index.scss";
 
-const onFinish = (values: any) => {
-    console.log('Success:', values);
-};
-
-const onFinishFailed = (errorInfo: any) => {
-    console.log('Failed:', errorInfo);
-};
-
 type FieldType = {
     username?: string;
     password?: string;
     remember?: boolean;
 };
 
-const Login: FC = () => {
+// 表单验证成功
+const onFinish = (values: any) => {
+    console.log('Success:', values);
+};
 
+// 表单验证失败
+const onFinishFailed = (errorInfo: any) => {
+    console.log('Failed:', errorInfo);
+};
+
+const Login: FC = () => {
     return (
         <div className="login-box">
             <Card style={{ width: 400 }}>
@@ -26,6 +27,7 @@ const Login: FC = () => {
                     <i className="iconfont icon-wy"></i>
                 </div>
 
+                {/* 表单 */}
                 <Form
                     name="basic"
                     className="login-form"
@@ -33,6 +35,7 @@ const Login: FC = () => {
                     onFinishFailed={onFinishFailed}
                     autoComplete="off"
                 >
+                    {/* 账号 */}
                     <Form.Item<FieldType>
                         name="username"
                         rules={[{ required: true, message: '请输入账号!' }]}
@@ -40,6 +43,7 @@ const Login: FC = () => {
                         <Input prefix={<i className="iconfont icon-shouji"></i>} placeholder="请输入账号" />
                     </Form.Item>
 
+                    {/* 密码 */}
                     <Form.Item<FieldType>
                         name="password"
                         rules={[{ required: true, message: '请输入密码!' }]}
@@ -51,6 +55,7 @@ const Login: FC = () => {
                         />
                     </Form.Item>
 
+                    {/* 记住密码 */}
                     <Form.Item>
                         <div className="form-auto-check">
                             <Form.Item<FieldType> name="remember" valuePropName="checked" noStyle>

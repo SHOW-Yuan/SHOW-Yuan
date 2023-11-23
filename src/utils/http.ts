@@ -1,7 +1,9 @@
 import axios from 'axios';
+import decode from 'entity-decode';
 import { isBoolean } from './type';
 
 const axiosIns = axios.create({
+    baseURL: 'http://localhost:4000',
     timeout: 10000
 })
 
@@ -35,12 +37,12 @@ axiosIns.interceptors.request.use(config => {
 
 
     return config;
-}, error => {
+}, (error: any) => {
     return Promise.reject(error);
 })
 
 // 添加响应拦截器
-axiosIns.interceptors.response.use(response => {
+axiosIns.interceptors.response.use((response) => {
     let config = response.config;
     let key = `${config.method}_${config.url}`;
     removeFromPool(key);
@@ -71,10 +73,10 @@ function axiosHttp(method = 'get', url = '', params = {}, emulateJSON = true, co
     }
 
     config.url = url;
-    if (location.port !== '') {
-        // vite 启动 没有 process
-        config.url = `/serve${url}`;
-    }
+    // if (location.port !== '') {
+    //     // vite 启动 没有 process
+    //     config.url = `/serve${url}`;
+    // }
     config.method = method;
 
     // 禁止在此处捕获异常
