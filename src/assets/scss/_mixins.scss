@@ -1,8 +1,8 @@
 // ========== flex布局 start ==========
 @mixin flex-setting($horizontal, $vertical: initial, $direction: row) {
     display: flex;
-    align-items: $vertical;
     justify-content: $horizontal;
+    align-items: $vertical;
     flex-direction: $direction;
 }
 

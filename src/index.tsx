@@ -1,4 +1,5 @@
 import React from 'React';
+import { Provider } from 'react-redux';
 import { createRoot } from 'react-dom/client';
 import { ConfigProvider } from 'antd';
 
@@ -6,11 +7,11 @@ import '@/assets/scss/index.scss';
 import '@/assets/icon/iconfont.css';
 
 import App from './App';
+import store from '@/store/index';
 
 const root = document.getElementById('root');
 if(root) {
     createRoot(root).render(
-        <React.StrictMode>
             <ConfigProvider
                 theme={{
                     token: {
@@ -28,8 +29,9 @@ if(root) {
                     }
                 }}
             >
-                <App />
+                <Provider store={store}>
+                    <App />
+                </Provider>
             </ConfigProvider>
-        </React.StrictMode>
     )
 }

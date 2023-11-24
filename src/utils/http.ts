@@ -30,9 +30,8 @@ axiosIns.interceptors.request.use(config => {
         })
     }
 
-    const token = '';
-    if (token) {
-        config.headers['token'] = token;
+    if (document.cookie) {
+        config.headers['cookie'] = document.cookie;
     }
 
 
@@ -41,6 +40,7 @@ axiosIns.interceptors.request.use(config => {
     return Promise.reject(error);
 })
 
+let alertLoginAgain = false;
 // 添加响应拦截器
 axiosIns.interceptors.response.use((response) => {
     let config = response.config;
@@ -48,9 +48,7 @@ axiosIns.interceptors.response.use((response) => {
     removeFromPool(key);
 
     if (alertLoginAgain) return
-    if (response.data.status == '2016') alertLoginAgain = true
-    // 用户中心错误处理
-    userCenterErrorHandler(response);
+    if (response.data.code == '2016') alertLoginAgain = true
 
     return response;
 }, error => {

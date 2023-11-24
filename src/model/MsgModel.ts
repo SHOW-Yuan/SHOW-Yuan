@@ -1,32 +1,22 @@
 class MsgModel<T> {
-	public static SUCCESS: number = 0
+	public static CODE: number = 200
 	public static FAIL: number = 1
 
-	public status: number | undefined = 0
+	public code: number | undefined = 200
 	public errorCode?: number | undefined = 0
 	public message?: string = ''
 	public data?: T | null | undefined = null
 
-	public get succ(): boolean {
-		return this.status === MsgModel.SUCCESS
-	}
-
 	public get success(): boolean {
-		return this.status === MsgModel.SUCCESS
+		return this.code === MsgModel.CODE
 	}
 
 	constructor(status: number, message: string)
 	constructor(status: number, message: string, data: T)
-	constructor(status?: number, message?: string, data?: T) {
-		this.status = status
+	constructor(code?: number, message?: string, data?: T) {
+		this.code = code
 		this.message = message || ''
 		this.data = data || null
-	}
-
-	public static succ(message: string): MsgModel<null>
-	public static succ(message: string, data: any): MsgModel<any>
-	public static succ(message: string, data?: any): MsgModel<any> {
-		return new MsgModel(MsgModel.SUCCESS, message, data)
 	}
 
 	public static fail(message: string): MsgModel<null>
@@ -36,7 +26,7 @@ class MsgModel<T> {
 	}
 
 	public static isSuccess(msgModel: any): boolean {
-		return Boolean(msgModel?.status == MsgModel.SUCCESS || msgModel?.succ || msgModel?.success)
+		return Boolean(msgModel?.code == MsgModel.CODE || msgModel?.success)
 	}
 
 	public static isFail(msgModel: any): boolean {

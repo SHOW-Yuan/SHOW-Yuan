@@ -2,6 +2,7 @@ const path = require('path');
 // 添加html-webpack-plugin插件
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const util = require('./util');
 
 const isDev = process.env.NODE_ENV === 'development' // 是否是开发模式
 
@@ -26,7 +27,8 @@ module.exports = {
                 isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
                 'css-loader',
                 'postcss-loader',
-                'sass-loader'
+                'sass-loader',
+                util.genSassResourceLoader()
             ],
         },
         {
