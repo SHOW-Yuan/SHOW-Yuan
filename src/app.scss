@@ -16,4 +16,14 @@
     border-radius: $border-radius-l3;
     overflow: hidden;
   }
+
+  .iconfont {
+    color: $icon-color;
+  }
+
+  .ant-row,
+  .ant-col,
+  .ant-flex {
+      height: 100%;
+  }
 }

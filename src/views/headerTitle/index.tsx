@@ -6,10 +6,10 @@ import { COL_LEFT, COL_RIGHT } from '@/model/const/Style';
 // model
 import { headerDiscoverList } from '@/views/headerTitle/model';
 // type
-import { DiscoverItemType } from '@/views/headerTitle/type';
+import { DiscoverItemType } from '@/types/home';
 
 /* 头部组件 */
-function HeaderTitle() {
+const HeaderTitle: React.FC = () => {
     const [active, setActive] = useState('个性推荐');
 
     return (
@@ -33,7 +33,7 @@ function HeaderTitle() {
                             <Flex className='content-right-r1' align="center" justify='space-around'>
                                 { 
                                     headerDiscoverList.map((x: DiscoverItemType) => {
-                                        return <span className={active === x.value ? 'active' : ''}>{x.label}</span>
+                                        return <span key={x.value} className={active === x.value ? 'active' : ''}>{x.label}</span>
                                     }) 
                                 }
                             </Flex>

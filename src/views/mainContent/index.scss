@@ -1,4 +1,90 @@
+$font-color-base: #aeaeae;
+
 .main-content {
     flex: 1;
     
+    &-left {
+        background-color: #1d1d1d;
+
+        .content-left-avatar {
+            @include flex-setting(flex-start, center);
+            padding: 10px;
+
+            img {
+                width: 45px;
+                height: 45px;
+                border-radius: 50%;
+                object-fit: cover;
+                margin-right: 15px;
+            }
+
+            span {
+                color: $font-color-base;
+                margin-right: 6px;
+                padding-bottom: 2px;
+            }
+            .iconfont {
+                color: #616161;
+                transform: rotate(-90deg);
+            }
+        }
+
+        .content-left-main {
+            .content-left-main-title {
+                padding: 10px 20px 5px;
+                color: $color-text-l3;
+            }
+
+            .content-left-main-item {
+                padding: 8px 20px;
+                margin-bottom: 3px;
+                cursor: pointer;
+                @include flex-setting(flex-start, center);
+                
+                .iconfont {
+                    color: $color-text-l3;
+                    font-size: 16px;
+                    display: inline-block;
+                    width: 30px;
+                    text-align: center;
+                }
+                span {
+                    color: $font-color-base;
+                }
+
+                &:nth-child(1) {
+                    i {
+                        font-size: 20px;
+                    }
+                }
+                &:nth-child(2) {
+                    i {
+                        font-size: 16px;
+                    }
+                }
+                &:nth-child(3) {
+                    i {
+                        font-size: 14px;
+                    }
+                }
+
+                &:hover {
+                    background-color: #191919;
+                }
+            }
+
+            .active-item {
+                background-color: #191919;
+
+                span,
+                .iconfont {
+                    color: $color-base;
+                }
+            }
+        }
+    }
+
+    &-right {
+        background-color: #212121;
+    }
 }

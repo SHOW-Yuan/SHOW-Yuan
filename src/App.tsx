@@ -6,7 +6,7 @@ import './app.scss';
 import Home from './views/home';
 import Login from './views/login';
 
-function App() {
+const App: React.FC = () => {
     return (
         <div className='music-content'>
             <div className='music-content-box'>

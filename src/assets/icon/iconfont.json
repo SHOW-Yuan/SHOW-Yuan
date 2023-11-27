@@ -6,6 +6,20 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "7380366",
+      "name": "定时任务历史记录",
+      "font_class": "dingshirenwulishijilu",
+      "unicode": "ebce",
+      "unicode_decimal": 60366
+    },
+    {
+      "icon_id": "8423784",
+      "name": "心跳心动",
+      "font_class": "huaban",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    },
+    {
       "icon_id": "629333",
       "name": "设置",
       "font_class": "shezhi",

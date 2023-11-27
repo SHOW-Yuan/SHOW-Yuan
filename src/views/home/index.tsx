@@ -1,4 +1,4 @@
-import React, { FC, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import './index.scss';
 
 // components
@@ -8,7 +8,7 @@ import FooterSong from '../footerSong';
 // hooks
 import { useFetchUserInfo, useFetchUserSubcount } from './hooks/useFetch';
 
-const Home: FC = () => {
+const Home: React.FC = () => {
     const { getToken, contextHolder } = useFetchUserInfo();
     const { fetchUserSubcount } = useFetchUserSubcount();
 

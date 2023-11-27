@@ -1,7 +1,7 @@
 import React from 'react';
 import './index.scss';
 
-function FooterSong() {
+const FooterSong: React.FC = () => {
     return (
         <div className='footer-song'>
             footer

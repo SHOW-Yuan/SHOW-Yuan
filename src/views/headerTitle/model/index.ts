@@ -1,4 +1,4 @@
-import { DiscoverListType } from '../type';
+import { DiscoverListType } from '@/types/home';
 
 export const headerDiscoverList: DiscoverListType = [
     {

@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React from "react";
 
 import { Card, Button, Checkbox, Form, Input } from 'antd';
 import "./index.scss";
@@ -19,7 +19,7 @@ const onFinishFailed = (errorInfo: any) => {
     console.log('Failed:', errorInfo);
 };
 
-const Login: FC = () => {
+const Login: React.FC = () => {
     return (
         <div className="login-box">
             <Card style={{ width: 400 }}>
